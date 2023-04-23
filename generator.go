@@ -18,8 +18,8 @@ type SdkGenerator struct {
 
 var classTemplate = `
 export class ClientSdk {
-    host: string
-    client: AxiosInstance
+    host!: string
+    client!: AxiosInstance
 
 // ##endfunction##
 }
@@ -91,7 +91,7 @@ func (gen *SdkGenerator) Generate(fname string) {
 	defer f.Close()
 
 	model, _ := gen.Model.Convert(map[string]string{})
-	scriptImport := `import axios, { AxiosInstance, AxiosResponse } from 'axios'` + "\n\n"
+	scriptImport := `import { AxiosInstance, AxiosResponse } from 'axios'` + "\n\n"
 	f.Write([]byte(scriptImport))
 	f.Write([]byte(model))
 	f.Write([]byte("\n\n"))
