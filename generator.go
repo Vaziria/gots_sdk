@@ -29,8 +29,8 @@ var tsFuncTemplate = `
 	async ##name##(query: ##query####payloadparam##): Promise<##response##> {
 		let res = await this.client.##method##<any, AxiosResponse<##response##, any>, ##payload##>('##url##',##payloadinsert## {
 			params: query
-		})
-		return res.data
+		});
+		return res.data;
 	}
 `
 
