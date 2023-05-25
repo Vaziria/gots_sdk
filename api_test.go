@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/Vaziria/gots_sdk"
+	"github.com/pdcgo/gots_sdk"
 )
 
 type PayloadData struct {

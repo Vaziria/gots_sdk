@@ -1,4 +1,4 @@
-module github.com/Vaziria/gots_sdk
+module github.com/pdcgo/gots_sdk
 
 go 1.19
 

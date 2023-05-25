@@ -4,8 +4,8 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/Vaziria/gots_sdk"
 	"github.com/gin-gonic/gin"
+	"github.com/pdcgo/gots_sdk"
 )
 
 type PayloadDataDD struct {
