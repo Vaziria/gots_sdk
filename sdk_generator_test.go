@@ -25,6 +25,18 @@ func TestCreateSDK(t *testing.T) {
 
 	})
 
+	datag := sdk.Group("/data")
+	datag.Register(&gots_sdk.Api{
+		Method: http.MethodGet,
+	}, func(ctx *gin.Context) {
+
+	})
+
+	usrg := datag.Group("/user")
+	usrg.Register(&gots_sdk.Api{
+		Method: http.MethodPost,
+	}, func(ctx *gin.Context) {})
+
 	sdk.RegisterGroup("/product", func(group *gin.RouterGroup, register gots_sdk.RegisterFunc) {
 		register(&gots_sdk.Api{
 			Payload:      PayloadDataDD{},
